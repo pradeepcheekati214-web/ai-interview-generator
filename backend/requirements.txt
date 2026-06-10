@@ -1,0 +1,7 @@
+flask==3.0.3
+flask-cors==4.0.1
+groq==0.9.0
+python-dotenv==1.0.1
+flask-limiter==3.7.0
+fpdf2==2.7.9
+gunicorn==22.0.0

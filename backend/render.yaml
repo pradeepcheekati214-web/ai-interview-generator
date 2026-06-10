@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: prepai-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false          # Set this manually in Render dashboard
+      - key: SECRET_KEY
+        generateValue: true  # Render auto-generates a secure random value
+      - key: FLASK_ENV
+        value: production
+      - key: FLASK_DEBUG
+        value: "False"
+      - key: CORS_ORIGINS
+        value: https://your-vercel-app.vercel.app   # Update after Vercel deploy
+      - key: RATE_LIMIT
+        value: 20 per minute

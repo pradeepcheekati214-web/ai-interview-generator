@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Interview Question Generator | PrepAI</title>
+  <meta name="description" content="Generate personalized interview questions instantly using AI. Perfect for freshers, students, and professionals." />
+  <meta name="keywords" content="interview questions, AI interview prep, technical interview, HR interview, mock interview" />
+  <meta property="og:title" content="AI Interview Question Generator" />
+  <meta property="og:description" content="Generate personalized interview questions instantly using AI." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-brand">
+      <span>🤖</span> Prep<span>AI</span>
+    </div>
+    <ul class="navbar-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#generator">Generator</a></li>
+      <li><a href="#mock-interview">Mock Interview</a></li>
+      <li><a href="#history">History</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <button id="theme-toggle" title="Toggle dark/light mode">🌙</button>
+      <a href="#generator" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+    <div class="hamburger" id="hamburger" role="button" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="#features"      onclick="closeMobileMenu()">Features</a></li>
+    <li><a href="#how-it-works"  onclick="closeMobileMenu()">How It Works</a></li>
+    <li><a href="#generator"     onclick="closeMobileMenu()">Generator</a></li>
+    <li><a href="#mock-interview"onclick="closeMobileMenu()">Mock Interview</a></li>
+    <li><a href="#history"       onclick="closeMobileMenu()">History</a></li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════ HERO ════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge fade-in">
+          <span class="dot"></span> Powered by Google Gemini AI
+        </div>
+        <h1 class="hero-title fade-in stagger-1">
+          AI Interview<br />
+          <span class="gradient-text">Question Generator</span>
+        </h1>
+        <p class="hero-subtitle fade-in stagger-2">
+          Generate personalized interview questions instantly using AI.
+          Get technical, HR, behavioral, and scenario-based questions with detailed answers.
+        </p>
+        <div class="hero-buttons fade-in stagger-3">
+          <a href="#generator" class="btn btn-primary">
+            ✨ Generate Questions
+          </a>
+          <a href="#mock-interview" class="btn btn-secondary">
+            🎯 Start Mock Interview
+          </a>
+        </div>
+        <div class="hero-stats fade-in stagger-4">
+          <div class="stat">
+            <div class="stat-number">50K+</div>
+            <div class="stat-label">Questions Generated</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">10K+</div>
+            <div class="stat-label">Users Helped</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Accuracy Rate</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual fade-in stagger-2">
+        <div class="hero-card-main">
+          <div class="hero-card-header">
+            <div class="hero-avatar">🤖</div>
+            <div>
+              <div class="hero-card-title">AI Interview Assistant</div>
+              <div class="hero-card-sub">Generating for: AWS Cloud Engineer</div>
+            </div>
+          </div>
+          <div class="question-preview">
+            <div class="q-item">
+              <span class="q-badge technical">Technical</span>
+              <div>What is AWS VPC and how does it provide network isolation?</div>
+            </div>
+            <div class="q-item">
+              <span class="q-badge hr">HR</span>
+              <div>Tell me about a challenging project you worked on recently.</div>
+            </div>
+            <div class="q-item">
+              <span class="q-badge scenario">Scenario</span>
+              <div>Your EC2 instance is unreachable. Walk me through your troubleshooting steps.</div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-badge badge-top-right">
+          ⚡ Generated in 3s
+        </div>
+        <div class="floating-badge badge-bottom-left">
+          📊 Score: 9.2/10
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ FEATURES ══════════════════════════════ -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">✨ Features</div>
+      <h2 class="section-title">Everything you need to <span class="gradient-text">ace your interview</span></h2>
+      <p class="section-desc">A complete AI-powered interview preparation platform built for modern job seekers.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🧠</div>
+        <h3 class="feature-title">AI-Powered Questions</h3>
+        <p class="feature-desc">Google Gemini generates hyper-relevant questions tailored to your role, experience, and skill set.</p>
+      </div>
+      <div class="feature-card fade-in stagger-1">
+        <div class="feature-icon">🎯</div>
+        <h3 class="feature-title">Mock Interview Scoring</h3>
+        <p class="feature-desc">Submit your answers and get instant AI feedback on accuracy, communication, and completeness.</p>
+      </div>
+      <div class="feature-card fade-in stagger-2">
+        <div class="feature-icon">📄</div>
+        <h3 class="feature-title">PDF & TXT Download</h3>
+        <p class="feature-desc">Export your personalized question bank as a clean PDF or plain text for offline study.</p>
+      </div>
+      <div class="feature-card fade-in stagger-3">
+        <div class="feature-icon">📁</div>
+        <h3 class="feature-title">Interview History</h3>
+        <p class="feature-desc">All your generated interviews are saved. Revisit and continue practicing from where you left off.</p>
+      </div>
+      <div class="feature-card fade-in stagger-1">
+        <div class="feature-icon">🎚️</div>
+        <h3 class="feature-title">Difficulty Levels</h3>
+        <p class="feature-desc">Choose Easy, Medium, or Hard to match your preparation level and challenge yourself progressively.</p>
+      </div>
+      <div class="feature-card fade-in stagger-2">
+        <div class="feature-icon">📎</div>
+        <h3 class="feature-title">Resume Upload</h3>
+        <p class="feature-desc">Upload your resume and let AI extract key skills to generate perfectly targeted questions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ HOW IT WORKS ══════════════════════════ -->
+<section class="section" id="how-it-works" style="background: rgba(99,102,241,0.03);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">🔍 Process</div>
+      <h2 class="section-title">How it <span class="gradient-text">works</span></h2>
+      <p class="section-desc">Four simple steps to a fully customized interview prep session.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item fade-in">
+        <div class="step-number">1</div>
+        <h4 class="step-title">Enter Your Profile</h4>
+        <p class="step-desc">Fill in your job role, experience level, skills, and preferred difficulty.</p>
+      </div>
+      <div class="step-item fade-in stagger-1">
+        <div class="step-number">2</div>
+        <h4 class="step-title">AI Generates Questions</h4>
+        <p class="step-desc">Gemini AI creates tailored technical, HR, behavioral, and scenario questions.</p>
+      </div>
+      <div class="step-item fade-in stagger-2">
+        <div class="step-number">3</div>
+        <h4 class="step-title">Review & Practice</h4>
+        <p class="step-desc">Explore questions with detailed answers. Use the mock interview to test yourself.</p>
+      </div>
+      <div class="step-item fade-in stagger-3">
+        <div class="step-number">4</div>
+        <h4 class="step-title">Download & Share</h4>
+        <p class="step-desc">Export as PDF or TXT, copy questions, or share with friends.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ CATEGORIES ════════════════════════════ -->
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">📚 Categories</div>
+      <h2 class="section-title">Question <span class="gradient-text">Categories</span></h2>
+      <p class="section-desc">Generate questions across all interview types to prepare comprehensively.</p>
+    </div>
+    <div class="categories-grid">
+      <div class="category-card cat-technical fade-in">
+        <div class="cat-icon">⚙️</div>
+        <h3 class="cat-title">Technical</h3>
+        <p class="cat-desc">Core programming, system design, DSA, cloud architecture, databases and frameworks.</p>
+      </div>
+      <div class="category-card cat-hr fade-in stagger-1">
+        <div class="cat-icon">🤝</div>
+        <h3 class="cat-title">HR / Soft Skills</h3>
+        <p class="cat-desc">Salary negotiation, team culture, career goals, conflict resolution and communication.</p>
+      </div>
+      <div class="category-card cat-behavioral fade-in stagger-2">
+        <div class="cat-icon">🧭</div>
+        <h3 class="cat-title">Behavioral</h3>
+        <p class="cat-desc">STAR-method questions, leadership, problem-solving under pressure and ownership.</p>
+      </div>
+      <div class="category-card cat-scenario fade-in stagger-3">
+        <div class="cat-icon">🎬</div>
+        <h3 class="cat-title">Scenario-Based</h3>
+        <p class="cat-desc">Real-world situational questions that test your practical knowledge and decision-making.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ GENERATOR ════════════════════════════ -->
+<section class="section" id="generator" style="background: rgba(99,102,241,0.03);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">🚀 Generator</div>
+      <h2 class="section-title">Generate Your <span class="gradient-text">Questions</span></h2>
+      <p class="section-desc">Fill in your details and let AI create a personalized interview question set.</p>
+    </div>
+
+    <div class="generator-layout">
+      <!-- Input Panel -->
+      <div class="input-panel">
+        <h3>⚙️ Interview Settings</h3>
+
+        <div class="form-group">
+          <label for="job-role">Job Role *</label>
+          <input type="text" id="job-role" class="form-control" placeholder="e.g. AWS Cloud Engineer" maxlength="100" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="experience">Experience Level *</label>
+            <select id="experience" class="form-control">
+              <option value="fresher">Fresher</option>
+              <option value="junior">Junior (1-2 yrs)</option>
+              <option value="mid" selected>Mid (2-5 yrs)</option>
+              <option value="senior">Senior (5-8 yrs)</option>
+              <option value="lead">Lead / Architect</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty" class="form-control">
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="skills">Skills (comma separated) *</label>
+          <input type="text" id="skills" class="form-control" placeholder="e.g. AWS, Linux, Networking, Docker" maxlength="300" />
+        </div>
+
+        <div class="form-group">
+          <label for="category">Question Category</label>
+          <select id="category" class="form-control">
+            <option value="mixed" selected>Mixed (All Types)</option>
+            <option value="technical">Technical Only</option>
+            <option value="hr">HR Only</option>
+            <option value="behavioral">Behavioral Only</option>
+            <option value="scenario">Scenario-Based Only</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Number of Questions</label>
+          <div class="number-input">
+            <button class="number-btn" id="num-dec">−</button>
+            <span class="number-display" id="num-display">10</span>
+            <button class="number-btn" id="num-inc">+</button>
+          </div>
+          <input type="hidden" id="num-questions" value="10" />
+        </div>
+
+        <button class="btn btn-primary generate-btn" id="generate-btn" onclick="generateQuestions()">
+          ✨ Generate Questions
+        </button>
+
+        <!-- Resume Upload -->
+        <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);">
+          <label style="font-size:0.85rem; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">
+            OR Upload Resume
+          </label>
+          <div class="resume-upload-area" id="resume-drop-zone" onclick="document.getElementById('resume-file').click()">
+            <input type="file" id="resume-file" accept=".txt,.pdf" onchange="handleResumeUpload(event)" />
+            <div style="font-size:1.5rem;">📎</div>
+            <p>Click or drag & drop your resume (.txt, .pdf)</p>
+            <p id="resume-filename" style="color: var(--primary); font-weight:600;"></p>
+          </div>
+          <button class="btn btn-secondary btn-sm" style="width:100%; margin-top:10px; justify-content:center;" id="resume-btn" onclick="generateFromResume()" disabled>
+            📎 Generate from Resume
+          </button>
+        </div>
+      </div>
+
+      <!-- Output Panel -->
+      <div class="output-panel" id="output-panel">
+        <div class="output-empty" id="output-empty">
+          <div class="empty-icon">🎯</div>
+          <h3>Ready to Generate</h3>
+          <p>Fill in your profile on the left and click <strong>Generate Questions</strong> to get started.</p>
+        </div>
+        <div id="output-loader" class="loader-wrap hidden">
+          <div class="loader"></div>
+          <p id="loader-text">Generating your personalized questions...</p>
+          <div class="progress-bar-wrap" style="max-width:300px; margin: 12px auto 0;">
+            <div class="progress-bar" id="loader-progress" style="width:0%"></div>
+          </div>
+        </div>
+        <div id="output-results" class="hidden">
+          <div class="output-header">
+            <div>
+              <div id="output-title" style="font-weight:700; font-size:1.05rem;"></div>
+              <div class="output-meta" id="output-meta"></div>
+            </div>
+            <div class="output-actions">
+              <button class="btn btn-secondary btn-sm" onclick="copyAllQuestions()" title="Copy all questions">
+                📋 Copy
+              </button>
+              <button class="btn btn-secondary btn-sm" onclick="downloadTxt()" title="Download as TXT">
+                📄 TXT
+              </button>
+              <button class="btn btn-primary btn-sm" onclick="downloadPdf()" title="Download as PDF">
+                📑 PDF
+              </button>
+            </div>
+          </div>
+          <div id="questions-list" class="questions-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ MOCK INTERVIEW ════════════════════════ -->
+<section class="section" id="mock-interview">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">🎯 Mock Interview</div>
+      <h2 class="section-title">Practice with <span class="gradient-text">AI Scoring</span></h2>
+      <p class="section-desc">Answer questions and receive instant AI feedback on accuracy, communication, and completeness.</p>
+    </div>
+
+    <div class="mock-layout">
+      <div class="mock-question-box">
+        <h4 style="margin-bottom:16px; color:var(--text-muted); font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px;">📝 Question</h4>
+        <div id="mock-q-display" style="font-size:1.05rem; line-height:1.7; min-height:100px; color:var(--text-muted);">
+          Generate questions first, then click <strong>"Practice"</strong> on any question to start the mock interview.
+        </div>
+        <div id="mock-q-expected" style="display:none;"></div>
+        <div style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="pickRandomQuestion()" id="random-q-btn">
+            🎲 Pick Random Question
+          </button>
+          <button class="voice-btn" id="voice-btn" onclick="toggleVoice()" title="Voice input">🎤</button>
+        </div>
+      </div>
+
+      <div class="mock-answer-box">
+        <h4 style="margin-bottom:16px; color:var(--text-muted); font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px;">✍️ Your Answer</h4>
+        <textarea id="mock-answer" class="form-control" placeholder="Type or speak your answer here..."></textarea>
+        <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn btn-primary" onclick="evaluateAnswer()" id="eval-btn">
+            🎯 Evaluate Answer
+          </button>
+          <button class="btn btn-secondary" onclick="clearMockAnswer()">Clear</button>
+        </div>
+        <div id="eval-loader" class="hidden" style="text-align:center; padding:20px 0;">
+          <div class="loader" style="width:36px;height:36px;border-width:3px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Evaluation Result -->
+    <div id="eval-result" class="eval-result hidden">
+      <h4 style="margin-bottom:20px;">📊 Evaluation Result</h4>
+      <div class="eval-scores">
+        <div class="eval-score-item">
+          <div class="eval-score-circle circle-total" id="score-total">–</div>
+          <div class="eval-label">Overall</div>
+        </div>
+        <div class="eval-score-item">
+          <div class="eval-score-circle circle-accuracy" id="score-accuracy">–</div>
+          <div class="eval-label">Accuracy</div>
+        </div>
+        <div class="eval-score-item">
+          <div class="eval-score-circle circle-comm" id="score-comm">–</div>
+          <div class="eval-label">Communication</div>
+        </div>
+        <div class="eval-score-item">
+          <div class="eval-score-circle circle-complete" id="score-complete">–</div>
+          <div class="eval-label">Completeness</div>
+        </div>
+      </div>
+
+      <div class="eval-feedback" id="eval-feedback">–</div>
+
+      <div class="eval-lists">
+        <div class="eval-list">
+          <h5>✅ Strengths</h5>
+          <ul id="eval-strengths"></ul>
+        </div>
+        <div class="eval-list improvements">
+          <h5>📈 Areas to Improve</h5>
+          <ul id="eval-improvements"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ HISTORY ══════════════════════════════ -->
+<section class="section" id="history" style="background: rgba(99,102,241,0.03);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">📂 History</div>
+      <h2 class="section-title">Interview <span class="gradient-text">History</span></h2>
+      <p class="section-desc">Your past interview sessions, ready to revisit and practice.</p>
+    </div>
+
+    <div style="display:flex; justify-content:center; gap:12px; margin-bottom:32px; flex-wrap:wrap;">
+      <button class="btn btn-primary" onclick="loadHistory()">🔄 Refresh History</button>
+    </div>
+
+    <div id="history-loader" class="loader-wrap hidden">
+      <div class="loader"></div>
+    </div>
+
+    <div id="history-empty" class="output-empty hidden">
+      <div class="empty-icon">📂</div>
+      <h3>No History Yet</h3>
+      <p>Generate your first set of interview questions to see history here.</p>
+    </div>
+
+    <div id="history-grid" class="history-grid"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ TESTIMONIALS ══════════════════════════ -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">⭐ Testimonials</div>
+      <h2 class="section-title">Loved by <span class="gradient-text">Job Seekers</span></h2>
+      <p class="section-desc">Thousands of candidates have landed their dream jobs with PrepAI.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"PrepAI generated exactly the right AWS questions for my Solutions Architect interview. Got the offer in two weeks!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg,#6366f1,#8b5cf6);">RS</div>
+          <div>
+            <div class="author-name">Rahul Sharma</div>
+            <div class="author-role">AWS Solutions Architect · Bangalore</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in stagger-1">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The mock interview scoring feature is incredible. It told me exactly where I was weak before my FAANG interview."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg,#06b6d4,#0891b2);">PP</div>
+          <div>
+            <div class="author-name">Priya Patel</div>
+            <div class="author-role">Software Developer · Hyderabad</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in stagger-2">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"As a fresher, I had no idea what to expect. PrepAI gave me confidence with questions matched to my skill level."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg,#f59e0b,#d97706);">AK</div>
+          <div>
+            <div class="author-name">Arjun Kumar</div>
+            <div class="author-role">Frontend Developer Fresher · Chennai</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════ FOOTER ══════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="navbar-brand">🤖 Prep<span>AI</span></div>
+        <p>AI-powered interview preparation platform. Generate personalized questions, practice with mock interviews, and land your dream job.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#generator">Generator</a></li>
+          <li><a href="#mock-interview">Mock Interview</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#features">Features</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#generator">Technical</a></li>
+          <li><a href="#generator">HR Questions</a></li>
+          <li><a href="#generator">Behavioral</a></li>
+          <li><a href="#generator">Scenario-Based</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>For Roles</h4>
+        <ul>
+          <li><a href="#generator">Software Developer</a></li>
+          <li><a href="#generator">AWS Engineer</a></li>
+          <li><a href="#generator">Frontend Developer</a></li>
+          <li><a href="#generator">Java Developer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 PrepAI · Built with ❤️ and Google Gemini AI</p>
+      <div class="social-links">
+        <a href="#" class="social-link" title="GitHub">🐙</a>
+        <a href="#" class="social-link" title="LinkedIn">💼</a>
+        <a href="#" class="social-link" title="Twitter">🐦</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════ TOAST CONTAINER ═════════════════════════ -->
+<div class="toast-container" id="toast-container"></div>
+
+<!-- ════════════════════════════════ MODAL ═══════════════════════════════ -->
+<div class="modal-overlay hidden" id="modal-overlay" onclick="closeModalOnOverlay(event)">
+  <div class="modal" id="modal-content">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
